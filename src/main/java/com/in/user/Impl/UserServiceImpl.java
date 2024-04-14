@@ -57,7 +57,7 @@ public class UserServiceImpl implements UserService {
         return user ;
     }
 
-    /** Feign Client */
+    /** Feign Client Important*/
     private void getFeignClientCalling(User user) {
         Rating [] list=restTemplate.getForObject("http://RATING-SERVICE/ratings/users/"+user.getUserId(), Rating[].class);
 
